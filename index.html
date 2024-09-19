@@ -1,128 +1,237 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
     <style>
-        header{
-            color: grey;
-            text-align: center;
-    
+        * {
+            margin: 0;
         }
-        form{
+
+        body {
+            background-image: url(pexels-thatguycraig000-1563356.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            opacity: 0.90;
+        }
+
+        header {
+            color: rgb(56, 52, 52);
+            text-align: center;
+            background-color: rgb(191, 235, 185);
+            padding: 10px;
+
+            box-shadow: 2px 2px 2px 2px grey;
+
+        }
+
+        h1 {
+            text-shadow: 1px 1px white;
+            font-size: 145%;
+
+        }
+
+
+        form {
             display: flex;
             flex-direction: column;
             padding: 30px;
-            border: 1px solid rgb(209, 208, 208);
-            background-color: rgb(221, 220, 220);
+
+            border: 3px solid rgb(192, 192, 192);
+            background-color: rgb(209, 205, 205);
             border-radius: 4px;
             margin: 10px auto;
-            width: 70%;
+            width: 80%;
+
         }
-        label{
+
+        label {
             margin-top: 20px;
             font-size: 20px;
             font-family: sans-serif;
         }
+
         input {
             margin-top: 10px;
             height: 30px;
+            border: 2px solid white;
         }
-        select{
+
+        select {
             margin-top: 10px;
+            background-color: white;
             height: 30px;
-          
+            border: 2px solid white;
+
         }
-        #sub{
+
+        #sub {
             background-color: black;
             color: white;
-            cursor: pointer
-            ;
-            box-shadow: 3px 3px 3px 3px grey;
+            cursor: pointer;
+            border: 2px solid white;
+            box-shadow: 2px 2px 2px 2px grey;
             font-size: 22px;
             font-family: 'Times New Roman', Times, serif;
             border-radius: 5px;
-            margin-top: 5px;
+            margin-top: 20px;
         }
-        #sub:hover{
-            background-color: rgb(65, 64, 64);
+
+        #sub:hover {
+            background-color: rgb(36, 35, 35);
         }
-      
-        h2{
+
+        h2 {
             text-align: center;
-            color: rgb(20, 3, 121);
+            font-size: 28px;
+            color: rgb(5, 85, 95);
         }
-        p{
+
+        #dev-contact {
+            background-color: rgb(145, 202, 178);
+            color: rgb(27, 27, 27);
+            padding: 7px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: 800;
+            width: 20%;
+            display: block;
+            margin: 10px auto;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+        }
+
+        #dev-contact a {
+            text-decoration: none;
+            color: black;
+        }
+
+        #dev-contact:hover {
+            background-color: rgb(255, 255, 255);
+
+        }
+
+        p {
             font-family: sans-serif;
         }
-        h3{
-            color: rgb(182, 5, 5);
+
+        h3 {
+            color: red;
             font-family: 'Times New Roman', Times, serif;
         }
-        footer{
+
+        footer {
             background-color: rgb(253, 227, 227);
-            padding: 10px;
+            padding: 15px;
+            margin-top: 5px;
             text-align: justify;
             border-left: 4px solid rgb(252, 83, 83);
-            
+
         }
-        #radio{
-            margin-right: 97%;
+
+        button {
+            background-color: rgb(70, 100, 90);
+            border-radius: 5px;
+            font-family: 'Times New Roman', Times, serif;
+            border: 2px solid white;
+            margin-top: 10px;
+            box-shadow: 2px 2px 2px 2px grey;
         }
-        ul{
-            font-family: sans-serif;
+
+        button:hover {
+
+            background-color: rgb(88, 99, 88);
         }
-       
-       
+
+        #last-section {
+            display: flex;
+            justify-content: space-around;
+
+        }
     </style>
 </head>
+
 <body>
     <header>
         <!--add text shadow-->
-        <h1>SLRC 2024 Rank Calculator(Tentative)</h1>
-        
+        <h1>SLRC 2024 Tentative Rank Predictor <br>Class XII Level</h1>
+
     </header>
-   
-   
+
+
     <main>
-        <hr>
+
         <form action="" method="post">
-            <h2>Tentative Rank Predictor <br> SLRC Grade 3 </h2>
-           
-            <label for="Name">Name</label>
-            <input type="text" placeholder="enter your name" required>
-            <label for="Email">Email</label>
-            <input type="email" name="Email" id="Email">
-            <label for="Category">Select your Category</label>
-            <select name="Category" id="Category">
-                <option value="OBC">OBC</option>
+            <h2>Check Your Rank
                 <hr>
-                <option value="UR">UR</option>
+            </h2>
+
+            <label for="Name">Name</label>
+            <input type="text" placeholder="enter your name" required name="Name">
+
+            <label for="Email">&#128231; Email</label>
+            <input type="email" name="Email" id="Email" placeholder="enter yor valid email address" required>
+
+            <label for="Category">Select your Category</label>
+            <select name="Category" id="Category" required>
+                <option value="Select..." selected>Select...</option>
+                <hr>
+                <option value="Unreserved(UR)">Unreserved(UR)</option>
+                <hr>
+                <option value="OBC/MOBC">OBC/MOBC</option>
                 <hr>
                 <option value="SC">SC</option>
-            </select>
-            <label for="Gender">Select your gender</label>
-                <select name="Gender" id="Gender">
-                    <option value="Gender">Male</option>
-                    <option value="Gender">Female</option>
-                </select>
+                <hr>
+                <option value="SC-H">SC-H</option>
+                <hr>
+                <option value="ST">ST</option>
+                <hr>
+                <option value="ST-H">ST-H</option>
+                <hr>
+                <option value="PH">PH</option>
+                <hr>
+                <option value="ESM">ESM</option>
 
-                
-        <p>By submitting you are aggreeing to our <a href="">standard terms and conditions</a></p>
-            <input type="SUBMIT" id="sub">
-           
+            </select>
+            <label for="Gender">&#9893; Select your gender</label>
+            <select name="Gender" id="Gender" required>
+                <option value="Select..." selected>Select...</option>
+                <hr>
+                <option value="Male">Male</option>
+                <hr>
+                <option value="Female">Female</option>
+            </select>
+            <label for="Marks">&#128202; Enter your marks</label>
+            <input type="number" max="150" required placeholder="without negative marks" name="Marks">
+            <input type="SUBMIT" id="sub" value="SUBMIT">
+            <hr>
+            <!-- <button><a href="">&#128229;Download Ranklist</a> </button> -->
+
         </form>
-        
+
     </main>
 </body>
-<hr>
+
 <footer>
-    <h3>Data Analytics Disclaimer</h3> 
-    <p>This website is a private initiative and is not affiliated with or endorsed by any governmnet entity. The predictions and rankings provided on this website are based on limited dataset and should not be considered as official or definitive.</p>
-    <h3>Important Notes</h3>
-    <p><ul>
-        <li>The predicted ranks and cutoffs are estimates and may not reflect the actual cutoffs,</li>
-       
-    </ul></p>
+    <h3>&#9888; Disclaimer</h3>
+    <br>
+    <p>This website is a private initiative and is not affiliated with or endorsed by any governmnet entity. The
+        predictions and rankings provided on this website are solely based on data analysis of limited dataset and
+        should not be considered as official or definitive.</p>
+    <br>
+    <hr>
+    <section id="last-section">
+        <button id="dev-contact"><a href="">Contact The Developer</a> </button>
+        <button id="dev-contact"><a href="">Submit Feedback</a> </button>
+        <button id="dev-contact"><a href="">Share on Whatsapp</a> </button>
+    </section>
+
+
+
 </footer>
+
+
+
 </html>
