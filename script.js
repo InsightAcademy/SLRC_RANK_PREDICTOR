@@ -12,11 +12,16 @@
     xhr.open('POST', 'https://script.google.com/macros/s/AKfycbxBmj9G60KVKB-Sa-EEHIcZ0McdFJDsWJ5aNH9Saf9NW8rnhev23-s-YREuzlzfQXI/exec', true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
     xhr.onload = function() {
+      console.log('onload event triggered');
       if (xhr.status === 200) {
+        console.log('Response received from server');
         const response = JSON.parse(xhr.responseText);
+        console.log('Response parsed:', response);
         if (response.result === 'success') {
+          console.log('Form submitted successfully!');
           alert('Form submitted successfully! Your rank is: ' + response.row);
         } else {
+          console.log('Error submitting form');
           alert('Error submitting form. Please try again.');
         }
       }
